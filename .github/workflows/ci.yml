@@ -27,7 +27,12 @@ jobs:
         run: python -m pytest
 
       - name: build docker image
-        run: docker build -t my-organizer-app .  
+        run: docker build -t my-organizer-app .
+
+      - name: Run docker container
+        run: docker run --rm my-organizer-app  
+
+ 
 
 
 
