@@ -30,7 +30,19 @@ jobs:
         run: docker build -t my-organizer-app .
 
       - name: Run docker container
-        run: docker run --rm my-organizer-app  
+        run: docker run --rm my-organizer-app 
+
+
+      - name: check docker hub credentials
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN}}
+
+        run: |
+          echo "docker hub username is available"
+          echo "docker hub token is available"
+            
+             
 
  
 
