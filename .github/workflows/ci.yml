@@ -37,9 +37,9 @@ jobs:
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-          run: |
-            echo "DOCKERHUB USERNAME IS AVAILABLE"
-            echo "DOCKERHUB TOKEN IS AVAILABLE"
+        run: |
+          echo "DOCKERHUB USERNAME IS AVAILABLE"
+          echo "DOCKERHUB TOKEN IS AVAILABLE"
 
           
         
