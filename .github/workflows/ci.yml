@@ -38,9 +38,18 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN}}
 
-        run: |
-          echo "docker hub username is available"
-          echo "docker hub token is available"
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Tag docker image
+        run: docker tag my-organizer-app:latest sohail4hmed/organizer:latest
+
+      - name: push docker image
+        run: docker push sohail4hmed/organizer:latest    
+
             
              
 
