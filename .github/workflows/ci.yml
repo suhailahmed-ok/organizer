@@ -54,7 +54,7 @@ jobs:
         run: docker tag my-organizer-app:latest sohail4hmed/organizer:latest
 
       - name: push docker image
-        run: docker push sohail4hmed/organizer:latest    
+        run: docker push sohail4hmed/organizer:latest   
 
             
              
